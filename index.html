@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LivelYo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">LivelYo </div>
+    <div class="menu">
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <div class="content">
+    <!-- Home -->
+    <div id="home" class="section">
+      <div class="post-container" id="postContainer">
+        <!-- Posts will be added here -->
+      </div>
+
+      <div class="post-form">
+        <div class="cat-bar">
+          <div class="cat-container">
+            <div class="cat-wrap">
+              <img src="https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif" alt="cat" class="cat-img" />
+              <span class="cat-name">aungsana</span>
+            </div>
+          </div>
+        </div>
+        <label for="imageInput" style="margin-bottom:4px;display:block;font-size:15px;color:#333;font-weight:500;">Add Image</label>
+        <input type="file" id="imageInput" accept="image/*" />
+        <img id="previewImage" style="display:none; margin-top:8px; width:60px; height:60px; border-radius:50%; object-fit:cover;" />
+        <textarea id="postInput" placeholder="Write your story..."></textarea>
+        <button onclick="addPost()" id="postBtn">Post</button>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="section" style="display: none;">
+      <h2>About</h2>
+      <p>This website is created for you to share your life stories.</p>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="section" style="display: none;">
+      <h2>Contact</h2>
+      <p>You can contact us at email@example.com</p>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
